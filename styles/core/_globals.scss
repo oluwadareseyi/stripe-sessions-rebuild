@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1440 * 10);
+  width: 100%;
+
+  @include media(">desktop") {
+    font-size: 10px;
+  }
+}
+
+html,
+body {
+  overscroll-behavior: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  height: 100%;
+  font-family: "Suisse", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  background: $white;
+  color: $black;
+  font-feature-settings: "case" on;
+}

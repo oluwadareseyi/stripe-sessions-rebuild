@@ -1,0 +1,77 @@
+%page {
+  // opacity: 0;
+  // overflow: hidden;
+  // pointer-events: none;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // visibility: hidden;
+  // width: 100%;
+  // height: 100%;
+  // z-index: z("content");
+}
+
+%page--active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  overflow: unset;
+  height: auto;
+}
+
+%content {
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+%img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+%svg-full {
+  svg {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+%wrapper {
+  margin: auto;
+  max-width: 130rem;
+  width: 90%;
+
+  @include media("<=phone") {
+    width: calc(100% - 5rem);
+  }
+}
+
+%desktop {
+  @include media("<=phone") {
+    display: none;
+  }
+}
+
+%desktop-tab {
+  @include media("<=tablet") {
+    display: none;
+  }
+}
+
+%tablet {
+  @include media(">tablet") {
+    display: none;
+  }
+}
+
+%mobile {
+  @include media(">phone") {
+    display: none;
+  }
+}

@@ -1,0 +1,76 @@
+%ovh {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+
+  img,
+  video {
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+  }
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin pagePadding {
+  .c-section {
+    width: 100%;
+  }
+
+  .c-section:not(.full-section) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include media(">tablet") {
+      max-width: calc(100% - 88px);
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 24px;
+    }
+
+    .c-section__inner {
+      width: 100%;
+    }
+  }
+}
+
+@mixin multiParagraphs {
+  p {
+    &:first-of-type {
+      margin: 0;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: revert;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @extend %link;
+  }
+}
+
+%page-full {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+%element-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

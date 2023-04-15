@@ -1,0 +1,176 @@
+// sans
+
+@mixin title120Mobile {
+  font-size: 64px;
+  letter-spacing: calc(-0.035 * 64px);
+  line-height: 1;
+}
+
+@mixin emoji48Mobile {
+  font-size: 24px;
+  letter-spacing: calc(0.15 * 24px);
+  line-height: 1;
+}
+
+%title-120 {
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: calc(-0.055 * 120px);
+
+  @include media("<=tablet") {
+    @include title120Mobile;
+  }
+}
+
+%title-64 {
+  @include title120Mobile;
+}
+
+%title-48 {
+  font-size: 48px;
+  letter-spacing: calc(-0.055 * 48px);
+  line-height: 1;
+  font-weight: 600;
+}
+
+%emoji-48 {
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: calc(0.15 * 48px);
+
+  @include media("<=tablet") {
+    @include emoji48Mobile;
+  }
+}
+
+%emoji-24 {
+  @include emoji48Mobile;
+}
+
+%title-24 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: calc(-0.015 * 24px);
+}
+
+%title-14 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: calc(0.025 * 14px);
+  text-transform: uppercase;
+}
+
+%body-16 {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+%body-16-lh-1 {
+  font-size: 16px;
+  line-height: 1;
+}
+
+%body-16-bold {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+%body-14 {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+%body-14-lh-1 {
+  font-size: 14px;
+  line-height: 1;
+}
+
+%body-14-bold {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+%captions-12 {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: calc(0.025 * 12px);
+}
+
+// serif
+@mixin serif {
+  font-family: $font-serif;
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  font-weight: 400;
+  font-feature-settings: "case" off;
+}
+
+@mixin title160Mobile {
+  font-size: 64px;
+  letter-spacing: calc(-0.025 * 64px);
+  line-height: 1;
+}
+
+%title-160-serif {
+  @include serif;
+  font-size: 160px;
+  line-height: 1;
+  letter-spacing: calc(-0.025 * 160px);
+  @include media("<=tablet") {
+    @include title160Mobile;
+  }
+}
+
+%title-64-serif {
+  @include serif;
+  @include title160Mobile;
+}
+
+%body-16-serif {
+  @include serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+// bitmap
+@mixin bitmap {
+  font-family: $font-bitmap;
+  line-height: 0.7;
+  text-transform: uppercase;
+  font-feature-settings: "case" on;
+}
+
+@mixin title172Mobile {
+  font-size: 64px;
+  letter-spacing: calc(-0.015 * 64px);
+}
+
+%title-172-pixel {
+  @include bitmap;
+  font-size: 172px;
+  letter-spacing: calc(-0.025 * 172px);
+
+  @include media("<=tablet") {
+    @include title172Mobile;
+  }
+}
+
+%title-96-pixel {
+  @include bitmap;
+  font-size: 96px;
+  letter-spacing: calc(-0.025 * 96px);
+}
+
+%title-64-pixel {
+  @include bitmap;
+  @include title172Mobile;
+}
+
+%title-32-pixel {
+  @include bitmap;
+  font-size: 32px;
+}

@@ -1,0 +1,29 @@
+$white: #ffffff;
+$black: #000010;
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-custom: cubic-bezier(0.33, 0, 0.67, 1);
+$ease-menu: cubic-bezier(0.63, 0, 0.4, 0.99);
+$ease-hero-marquee: cubic-bezier(0.24, 0.6, 0.25, 1);
+
+// fonts
+$font-sans: "Suisse", sans-serif;
+$font-serif: "Fraunces", serif;
+$font-bitmap: "PP Neue", "Adjusted Arial Fallback", sans-serif;
+
+$z-indexes: (
+  "noscript",
+  "preloader",
+  "transition",
+  "modal",
+  "overlay",
+  "nav",
+  "canvas",
+  "menu",
+  "content",
+  "smoke",
+  "4",
+  "3",
+  "2",
+  "1"
+);
