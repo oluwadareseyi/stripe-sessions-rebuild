@@ -64,9 +64,8 @@ export default class extends Component {
     const slides = this.slides;
 
     const firstSlide = slides[0];
-    const lastSlide = slides[slides.length - 1];
 
-    this.elements.slideParent.insertBefore(firstSlide, lastSlide.nextSibling);
+    this.elements.slideParent.insertBefore(firstSlide, null);
     this.elements.slideParent.classList.add(this.classes.append);
 
     const delay = setTimeout(() => {
