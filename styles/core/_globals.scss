@@ -16,7 +16,6 @@ body {
 }
 
 body {
-  height: 100%;
   font-family: "Suisse", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -24,4 +23,13 @@ body {
   background: $white;
   color: $black;
   font-feature-settings: "case" on;
+}
+
+main {
+  min-height: 100vh;
+  max-width: 1232px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  overflow: hidden;
 }

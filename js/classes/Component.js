@@ -2,7 +2,6 @@ import AutoBind from "../utils/bind";
 
 export default class Component {
   constructor({ element, elements }) {
-    super();
     AutoBind(this);
 
     this.selector = element;

@@ -9,7 +9,63 @@
   </head>
   <body>
     <main>
-      <h1>Hello Vite</h1>
+      <section class="c-slider__wrapper">
+        <div class="c-slider" data-slider>
+          <div class="c-slider__controls">
+            <button data-prev-button>
+              <svg
+                width="7"
+                height="10"
+                viewBox="0 0 7 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 9L2 5L6 1"
+                  transform="translate(-1,0)"
+                  stroke="white"
+                  stroke-width="1.75"
+                ></path>
+              </svg>
+            </button>
+            <button data-next-button>
+              <svg
+                width="7"
+                height="10"
+                viewBox="0 0 7 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L5 5L1 9"
+                  transform="translate(1,0)"
+                  stroke="white"
+                  stroke-width="1.75"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <ul class="c-slides" data-slides>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide c-slide--active"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+            <li data-slide class="c-slide"></li>
+          </ul>
+        </div>
+      </section>
     </main>
     <script type="module" src="/js/index.js"></script>
   </body>
