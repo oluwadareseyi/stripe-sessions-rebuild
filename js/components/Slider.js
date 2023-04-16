@@ -81,7 +81,6 @@ export default class extends Component {
     const slide = el.closest("[data-slide]");
 
     const index = getIndex(slide);
-    this.currentSlide = index;
 
     if (index === 2) {
       this.prependSlide();
