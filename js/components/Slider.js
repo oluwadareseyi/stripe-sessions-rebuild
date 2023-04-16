@@ -92,9 +92,6 @@ export default class extends Component {
 
     this.resetSlidesClasses();
     slide.classList.add(this.classes.active);
-
-    this.cancelAutoPlay();
-    this.autoPlay();
   }
 
   playPreviousSlide() {
@@ -105,6 +102,7 @@ export default class extends Component {
     const prevSlide = activeSlide.previousElementSibling;
 
     this.handleSlideChange(prevSlide);
+    this.resetAutoPlay();
   }
 
   playNextSlide() {
@@ -115,6 +113,7 @@ export default class extends Component {
     const nextSlide = activeSlide.nextElementSibling;
 
     this.handleSlideChange(nextSlide);
+    this.resetAutoPlay();
   }
 
   addEventListeners() {
@@ -127,16 +126,16 @@ export default class extends Component {
       });
     });
 
-    prevButton.addEventListener("click", () => {
-      this.playPreviousSlide();
-    });
-
-    nextButton.addEventListener("click", () => {
-      this.playNextSlide();
-    });
+    prevButton.addEventListener("click", this.playPreviousSlide);
+    nextButton.addEventListener("click", this.playNextSlide);
 
     slideParent.addEventListener("mouseenter", this.cancelAutoPlay);
     slideParent.addEventListener("mouseleave", this.autoPlay);
+  }
+
+  resetAutoPlay() {
+    this.cancelAutoPlay();
+    this.autoPlay();
   }
 
   autoPlay() {
