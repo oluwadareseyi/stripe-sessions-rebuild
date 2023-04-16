@@ -39,15 +39,3 @@ export function mapEach(element, callback) {
 
   return map(element, callback);
 }
-
-export const getNextElement = (elem, selector) => {
-  let sibling = elem.nextElementSibling;
-  if (!selector) return sibling;
-
-  while (sibling) {
-    if (sibling.matches(selector)) return sibling;
-    sibling = sibling.nextElementSibling;
-  }
-};
-
-export const easing = `cubic-bezier(0.19, 1, 0.22, 1)`;
