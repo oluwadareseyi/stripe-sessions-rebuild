@@ -18,7 +18,6 @@ export default class extends Component {
 
     this.classes = {
       active: "c-slide--active",
-      end: "c-slide--end",
       prepend: "c-slides--prepend",
       append: "c-slides--append",
     };
