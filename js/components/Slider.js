@@ -52,7 +52,6 @@ export default class extends Component {
 
     this.elements.slideParent.insertBefore(lastSlide, firstSlide);
     this.elements.slideParent.classList.add(this.classes.prepend);
-    // add active class to the new first slide
 
     const delay = setTimeout(() => {
       this.elements.slideParent.classList.remove(this.classes.prepend);
